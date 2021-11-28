@@ -1,0 +1,88 @@
+import conectarBD from './db/db';
+import { UserModel } from './models/user';
+import { Enum_Rol, Enum_TipoObjetivo } from './models/enums';
+import { ProjectModel } from './models/project';
+import { ObjectId } from 'mongoose';
+import { ObjectiveModel } from './models/objetivo';
+
+const main = async () =>{
+    await conectarBD();
+    
+    const proyectoCreado = await ProjectModel.find({id: '619db312df433fb03793b0d9'});
+    console.log('Proyecto: ', proyectoCreado);
+    
+       
+};
+
+main();
+
+//CRUD USUARIOS
+
+// //CREAR USUARIO
+    // await UserModel.create({
+    //     correo: "tati@gmail.com",
+    //     nombre: "Tatiana",
+    //     apellido: "Posada",
+    //     identificacion: "1112761541",
+    //     rol: Enum_Rol.estudiante,         
+    // })
+    // .then((u)=>{
+    //     console.log("usuario creado", u);           
+    // })
+    // .catch((e)=>{
+    //     console.error("error creando el usuario", e);
+    // })
+
+    // //OBRENER LOS USUARIOS
+    // await UserModel.find()
+    // .then((u) =>{
+    //     console.log("Usurario", u);        
+    // })
+    // .catch((e) =>{
+    //     console.log("Erro obteniendo el usuario", e);        
+    // });
+
+    // //OBTENER UN SOLO USUARIO
+    // await UserModel.findOne({ correo: 'dsl@hotmail.com'})
+    // .then((u) => {
+    //     console.log("Usuario encontrado", u);        
+    // })
+    // .catch((e) => {
+    //     console.log(e); 
+    // })
+
+    // //EDITAR UN USUARIO
+    // await UserModel.findOneAndUpdate({ identificacion: '111236326'},
+    // {
+    //     nombre: 'Juan',
+    //     apellido: 'Lopez',
+    // })
+    // .then((u) => {
+    //     console.log("Usuario actualido");            
+    // })
+    // .catch((e) => {
+    //     console.log("Error al actualizar usuario");    
+    // });
+
+    // //ELIMINAR UN USUARIO
+    // await UserModel.findOneAndDelete({ identificacion: '111236326'})
+    // .then((u) => {
+    //     console.log("Usuario eliminado");            
+    // })
+    // .catch((e) => {
+    //     console.log("Error al eliminar usuario"); 
+    // });
+
+//METODOLOGIA ONE TO MANY
+// const proyecto =  await projectModel.create({
+//     nombre: 'Proyecto Mision Tic',
+//     fechaInicio: new Date('2021/12/24'),
+//     fechaFin: new Date('2022/12/24'),
+//     presupuesto: 120000,
+//     lider: '619871b8ae0014175da406ab',
+//     objetivos: [
+//         {descripcion:"Este es el objetivo general", tipo:Enum_TipoObjetivo.general},
+//         {descripcion:"Este es un objetivo especifico 1", tipo:Enum_TipoObjetivo.especifico},
+//         {descripcion:"Este es un objetivo especifico 2", tipo:Enum_TipoObjetivo.especifico},
+//     ]
+// }); 

@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "module": "commonJs",
+        "esModuleInterop": true
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
