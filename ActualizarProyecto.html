@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Proyecto</title>
+</head>
+<body>
+    <header><h1>Tus proyectos</h1></header>
+    <main>
+        <section>
+            <h2>Crear Proyecto</h2>
+            <form>
+                <label for="Nombre">Nombre: </label>
+                <input type="text" id="IdNombre" name="Nombre" placeholder="Proyecto"><br>
+                <label for="NombreLider">Nombre Lider: </label>
+                <input type="text" id="IdNombreLider" name="NombreLider" placeholder="Juan Gonzales"><br>
+                <label for="DescripcionProyecto">Descripcion del proyecto: </label>
+                <textarea name="DescripcionProyecto" id="IdDescripcionProyecto" cols="30" rows="10"></textarea><br>
+                <label for="ObjetivosEsp">Objetivos especificos: </label>
+                <textarea name="ObjetivosEsp" id="IdObjetivosEsp" cols="30" rows="5" sentences></textarea><br>
+                <label for="Presupuesto">Presupuesto: </label>
+                <input type="number" id="IdPresupuesto" name="Presupuesto"><br>
+                <label for="Fecha1">Fecha de inicio: </label>
+                <input type="date" id="IdFecha1" name="Fecha1"><br>
+                <label for="Fecha2">Fecha de terminacion: </label>
+                <input type="date" id="IdFecha2" name="Fecha2"><br>
+                <label for="estado">Estado del proyecto: </label>
+                <select name="estado" id="estado">
+                    <option value="Activo">Activo</option>
+                    <option value="Inactivo">Inactivo</option>
+                </select><br>
+                <label for="FaseProyecto">Fase del proyecto: </label>
+                <input type="text" id="IdFaseProyecto" name="FaseProyecto"><br>
+                <button name="Actualizar" id="IdActualizar">Actualizar Proyecto</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
